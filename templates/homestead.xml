@@ -16,7 +16,7 @@
 
   <Category>Tools: MediaApp:Other</Category>
 
-  <WebUI>http://[IP]:[PORT:7312]/</WebUI>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
 
   <TemplateURL>https://raw.githubusercontent.com/tbritton0826/homestead-unraid-templates/main/templates/homestead.xml</TemplateURL>
 
@@ -33,7 +33,7 @@
 
   <Config
     Name="WebUI Port"
-    Target="7312"
+    Target="3001"
     Default="7312"
     Mode="tcp"
     Description="Port used to access the Homestead web interface."
