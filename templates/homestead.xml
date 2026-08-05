@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Homestead</Name>
+  <Repository>ghcr.io/tbritton0826/homestead:latest</Repository>
+  <Registry>https://github.com/tbritton0826/homestead/pkgs/container/homestead</Registry>
+
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <Support>https://github.com/tbritton0826/homestead/issues</Support>
+  <Project>https://github.com/tbritton0826/homestead</Project>
+
+  <Overview>Homestead is a self-hosted household management and personal library platform for organizing media, family information, pets, recipes, documents, inventory, cloud resources, and other household collections from one interface.</Overview>
+
+  <Category>Tools: MediaApp:Other</Category>
+
+  <WebUI>http://[IP]:[PORT:7312]/</WebUI>
+
+  <TemplateURL>https://raw.githubusercontent.com/tbritton0826/homestead-unraid-templates/main/templates/homestead.xml</TemplateURL>
+
+  <Icon>https://raw.githubusercontent.com/tbritton0826/homestead-unraid-templates/main/images/homestead-icon.png</Icon>
+
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+
+  <DonateText/>
+  <DonateLink/>
+
+  <Description>Homestead is a self-hosted platform for household media, profiles, inventory, documents, personal libraries, and optional integrations.</Description>
+
+  <Config
+    Name="WebUI Port"
+    Target="7312"
+    Default="7312"
+    Mode="tcp"
+    Description="Port used to access the Homestead web interface."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false">7312</Config>
+
+  <Config
+    Name="Application Data"
+    Target="/app/data"
+    Default="/mnt/user/appdata/homestead"
+    Mode="rw"
+    Description="Persistent configuration, databases, plugins, metadata, thumbnails, and generated application data."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false">/mnt/user/appdata/homestead</Config>
+
+  <Config
+    Name="Movies"
+    Target="/media/movies"
+    Default="/mnt/user/Media/Movies"
+    Mode="rw"
+    Description="Host folder containing movie files."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Media/Movies</Config>
+
+  <Config
+    Name="TV Shows"
+    Target="/media/tv"
+    Default="/mnt/user/Media/TV"
+    Mode="rw"
+    Description="Host folder containing television shows."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Media/TV</Config>
+
+  <Config
+    Name="Music"
+    Target="/media/music"
+    Default="/mnt/user/Media/Music"
+    Mode="rw"
+    Description="Host folder containing music."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Media/Music</Config>
+
+  <Config
+    Name="Books"
+    Target="/media/books"
+    Default="/mnt/user/Media/Books"
+    Mode="rw"
+    Description="Host folder containing books and audiobooks."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Media/Books</Config>
+
+  <Config
+    Name="YouTube"
+    Target="/media/youtube"
+    Default="/mnt/user/Media/YouTube"
+    Mode="rw"
+    Description="Host folder containing archived YouTube media."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Media/YouTube</Config>
+
+  <Config
+    Name="Photos"
+    Target="/media/photos"
+    Default="/mnt/user/Photos"
+    Mode="rw"
+    Description="Host folder containing photographs and image libraries."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Photos</Config>
+
+  <Config
+    Name="Live TV Recordings"
+    Target="/media/livetv/recordings"
+    Default="/mnt/user/Media/LiveTV"
+    Mode="rw"
+    Description="Host folder containing Live TV recordings."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Media/LiveTV</Config>
+
+  <Config
+    Name="Recipes"
+    Target="/media/recipes"
+    Default="/mnt/user/Homestead/Recipes"
+    Mode="rw"
+    Description="Host folder containing recipe files and related media."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Homestead/Recipes</Config>
+
+  <Config
+    Name="Pets"
+    Target="/media/pets"
+    Default="/mnt/user/Homestead/Pets"
+    Mode="rw"
+    Description="Host folder containing pet profiles, documents, and media."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Homestead/Pets</Config>
+
+  <Config
+    Name="Documents"
+    Target="/media/documents"
+    Default="/mnt/user/Homestead/Documents"
+    Mode="rw"
+    Description="Host folder containing household documents, manuals, and records."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false">/mnt/user/Homestead/Documents</Config>
+
+  <Config
+    Name="Adult Library"
+    Target="/media/adult"
+    Default=""
+    Mode="rw"
+    Description="Optional host folder for the private Adult library. Leave blank when unused."
+    Type="Path"
+    Display="advanced"
+    Required="false"
+    Mask="false"></Config>
+</Container>
