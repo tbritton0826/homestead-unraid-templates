@@ -166,11 +166,11 @@
   <Config
     Name="Adult Library"
     Target="/media/adult"
-    Default=""
+    Default="/mnt/user/Homestead/Adult"
     Mode="rw"
     Description="Optional host folder for the private Adult library. Leave blank when unused."
     Type="Path"
-    Display="advanced"
+    Display="always"
     Required="false"
-    Mask="false"></Config>
+    Mask="false">/mnt/user/Homestead/Adult</Config>
 </Container>
